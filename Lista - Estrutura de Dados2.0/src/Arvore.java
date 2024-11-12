@@ -8,6 +8,8 @@ import java.util.Random;
 
 public class Arvore {
 
+    //12. Crie uma árvore que tem um atributo especial do tipo Criteria
+    
     No raiz;
     private final Criteria criterio;
 
@@ -256,7 +258,7 @@ public class Arvore {
                              return noh;
     }
 
-    //Adicione um método que recebe uma árvore como parâmetro e a “concatena” a um nó
+    //10. Adicione um método que recebe uma árvore como parâmetro e a “concatena” a um nó
    //especificado.
 
     public void concatenarArvore(Arvore outraArvore, No noh) {
@@ -273,7 +275,8 @@ public class Arvore {
 
             } else {
 
-                System.out.println("esse no ja tem filho demais");
+                concatenarArvore(outraArvore, noh.esquerda);
+                concatenarArvore(outraArvore, noh.direita);
 
             }
         }
